@@ -4,6 +4,7 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 import numpy as np
 
+
 class RecommenderNet(nn.Module):
     def __init__(self, num_users, num_books, embedding_size=50):
         super(RecommenderNet, self).__init__()
@@ -24,6 +25,7 @@ class RecommenderNet(nn.Module):
         x = self.relu(self.fc2(x))
         return self.output(x)
 
+
 class BookDataset(Dataset):
     def __init__(self, user_ids, book_ids, ratings):
         self.user_ids = torch.tensor(user_ids, dtype=torch.long)
@@ -36,10 +38,10 @@ class BookDataset(Dataset):
     def __getitem__(self, idx):
         return self.user_ids[idx], self.book_ids[idx], self.ratings[idx]
 
-def train_model(model, train_loader, epochs=5):
+
+def train_model(model, train_loader, epochs=5, progress_callback=None):
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
-    
     model.train()
     for epoch in range(epochs):
         total_loss = 0
@@ -50,5 +52,7 @@ def train_model(model, train_loader, epochs=5):
             loss.backward()
             optimizer.step()
             total_loss += loss.item()
+        if progress_callback:
+            progress_callback(epoch + 1, epochs)
         print(f"Epoch {epoch+1}/{epochs}, Loss: {total_loss/len(train_loader):.4f}")
     return model
