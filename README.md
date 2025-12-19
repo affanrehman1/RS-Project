@@ -99,6 +99,8 @@ The application will automatically open in your default web browser.
 
 ## 📁 Project Structure
 
+The project follows a **single, clean, and consistent directory structure** as shown below:
+
 ```
 book_recommender/
 │
@@ -112,8 +114,8 @@ book_recommender/
 │   ├── app.py            # Streamlit application entry point
 │   ├── content_based.py  # Content-based recommendation logic
 │   ├── database.py       # Database connection and queries
-│   ├── neural_network.py # Neural network model definition
-│   └── preprocessing.py # Data cleaning and preprocessing
+│   ├── neural_network.py # Neural network model
+│   └── preprocessing.py # Data preprocessing
 │
 ├── requirements.txt      # Python dependencies
 ├── README.md
@@ -121,55 +123,43 @@ book_recommender/
 └── Run Code.txt          # Quick run instructions
 ```
 
-book_recommender/
-│
-├── src/
-│   ├── app.py            # Streamlit frontend
-│   ├── model.py          # Neural network model
-│   └── recommender.py    # Recommendation logic
-│
-├── database/
-│   └── books.db          # SQLite3 database
-│
-├── requirements.txt      # Project dependencies
-├── README.md
-└── .gitignore
+---
 
-```
+## 📄 License
+
+This project is intended for **educational and academic purposes only**.
+
+You are free to use, modify, and extend this project for learning, coursework, and research.
 
 ---
 
 ## 🧩 Portability & Compatibility
 
-- Uses **relative paths** to ensure the project runs on any system
-- Database powered by **SQLite3** (no external DB setup required)
-- Tested with **Streamlit** on Windows, Linux, and macOS
+* Uses **relative paths** to ensure the project runs on any system
+* Database powered by **SQLite3** (no external DB setup required)
+* Tested with **Streamlit** on Windows, Linux, and macOS
 
 ---
 
 ## 📌 Use Cases
 
-- Personalized book discovery
-- Academic and research projects
-- Learning recommender systems and neural networks
-- Lightweight recommendation engines
+* Personalized book discovery
+* Academic and research projects
+* Learning recommender systems and neural networks
+* Lightweight recommendation engines
 
 ---
 
 ## 👨‍💻 Team Members
 
-- **Ahsan Faizan**  
-- **Affan Rehman**  
-- **Mujtaba Khan**
+* **Ahsan Faizan**
+* **Affan Rehman**
+* **Mujtaba Khan**
 
 ---
 
 ## 📄 License
 
-This project is for educational and academic purposes.
+This project is intended for **educational and academic purposes only**.
 
----
-
-⭐ If you find this project useful, feel free to star the repository and explore further improvements!
-
-```
+You are free to use, modify, and extend this project for learning, coursework, and research.
